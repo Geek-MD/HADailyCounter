@@ -24,6 +24,7 @@ class DailyCounterSensor(Entity):
 
     async def async_added_to_hass(self):
         """Ensure the entity is available upon adding to Home Assistant."""
+        self._state = 0
         self.async_write_ha_state()
 
     @property
